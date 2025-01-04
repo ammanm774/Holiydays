@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Haven</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .holiday-ideas, .holiday-events {
+            display: flex;
+        }
+        .holiday-card, .event-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        /* Add general transition for images */
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for transform and opacity */
+            opacity: 0; /* Initially hide images */
+            animation: slideIn 1s forwards; /* Animation for sliding in */
+        }
+
+        /* Animation for sliding in from the right */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%); /* Start off-screen to the right */
+                opacity: 0; /* Initially transparent */
+            }
+            100% {
+                transform: translateX(0); /* End at the normal position */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        /* On hover, apply the scaling and opacity change */
+        img:hover {
+            transform: scale(1.1); /* Slightly zoom in */
+            opacity: 0.8; /* Slightly fade the image */
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Plan Your Holidays in Advance</h1>
+    <p>Make your holidays stress-free and exciting by planning early!</p>
+</header>
+
+<img style="width: 100%; background-color: white; border-radius: 0px;" src="aman3.jpg" alt="holiday">
+<h1 style="font-size: 60px; text-align: center;">The Holiday Haven</h1>
+
+<div style="text-align: center;">
+    <a style="padding-right: 20px;" href="Muahmmad AMAN.html">Home</a>
+    <a style="padding-right: 20px;" href="#holiday-ideas">About</a>
+    <a style="padding-right: 20px;" href="#contact">Contact Us</a>
+</div>
+
+<p style="text-align: center;">Welcome to Holydays – Your ultimate guide to the best holiday experiences!</p>
+
+<hr>
+
+<h2 style="font-size: 60px; text-align: center;">Your Dream Vacation Begins Now</h2>
+
+<div style="text-align: center;">
+    <img style="width: 32.33%;" src="aman.jpg" alt="holiday">
+    <img style="width: 33.33%;" src="aman2.jpg" alt="holiday">
+    <img style="width: 32.33%;" src="aman3.jpg" alt="holiday">
+</div>
+
+<h2 style="font-size: 60px; text-align: center;">About Holiday</h2>
+
+<p style="text-align: center;">Holidays are a much-needed break from the routines of everyday life...</p>
+
+<div class="container">
+    <section id="holiday-ideas">
+        <h2 class="section-title" style="text-align: center;">Holiday Ideas</h2>
+        <div class="holiday-ideas">
+            <div class="holiday-card">
+                <img src="MB.jpg" alt="Holiday">
+                <h3>Beach Getaway</h3>
+                <p>Relax on a beautiful sandy beach with clear blue water. Perfect for family vacations or romantic getaways!</p>
+            </div>
+            <div class="holiday-card">
+                <img src="HOLIYDAYS.jpg" alt="Mountain Adventure">
+                <h3>Mountain Adventure</h3>
+                <p>Explore the great outdoors in the mountains. Hiking, skiing, and fresh air await you!</p>
+            </div>
+            <div class="holiday-card">
+                <img src="HO - Copy.jpg" alt="City Break">
+                <h3>City Break</h3>
+                <p>Enjoy a cultural escape to a city with rich history, museums, and vibrant streets.</p>
+            </div>
+            <div class="holiday-card">
+                <img src="ITS.jpg" alt="Countryside Retreat">
+                <h3>Countryside Retreat</h3>
+                <p>Get away from the hustle and bustle and immerse yourself in the peaceful countryside.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title" style="text-align: center;">Contact Us</h2>
+        <p style="text-align: center;">If you have any questions or want to book your next holiday, get in touch with us!</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+</div>
+
+
+<footer class="footer">
+    <p>&copy; 2024 Plan Your Holidays in Advance. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
